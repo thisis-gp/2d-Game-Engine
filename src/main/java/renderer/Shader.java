@@ -18,43 +18,54 @@ public class Shader {
         this.filepath = filepath;
         try {
             String source = new String(Files.readAllBytes(Paths.get(filepath)));
-            String[] splitString = source.split("(#type)( )+([a-zA-Z])");
+//            System.out.println(source);
+            String[] splitString = source.split("(#type)(\\s+)([a-zA-Z]+)");
+
+//            System.out.println(splitString);
+
 
             //Find the first pattern after #type pattern
             int index = source.indexOf("#type") + 6;
+            System.out.println(index);
             int eol = source.indexOf("\r\n",index);
+            System.out.println(eol);
             String firstPattern = source.substring(index,eol).trim();
+            System.out.println(firstPattern);
 
             //Find the second pattern after #type pattern
             index = source.indexOf("#type",eol) + 6;
             eol = source.indexOf("\r\n",index);
             String secondPattern = source.substring(index,eol).trim();
-
+//            System.out.println(secondPattern);
             if (firstPattern.equals("vertex")){
                 vertexSource = splitString[1];
+                System.out.println(vertexSource);
             } else if (firstPattern.equals("fragment")) {
                 fragmentSource = splitString[1];
+//                System.out.println(fragmentSource);
             } else {
                 throw  new IOException("Unexpected token '" + firstPattern +  "'");
 
             }
             if (secondPattern.equals("vertex")){
                 vertexSource = splitString[2];
+                System.out.println(vertexSource);
             } else if (secondPattern.equals("fragment")) {
                 fragmentSource = splitString[2];
+//                System.out.println(fragmentSource);
             } else {
                 throw  new IOException("Unexpected token '" + secondPattern +  "'");
 
             }
-            System.out.println(vertexSource);
-            System.out.println(fragmentSource);
+//            System.out.println(vertexSource);
+//            System.out.println(fragmentSource);
 
         }catch (IOException e){
             e.printStackTrace();
             assert false: "Error: could not open file for shader:'" + filepath + "'";
         }
-        System.out.println(vertexSource);
-        System.out.println(fragmentSource);
+//        System.out.println(vertexSource);
+//        System.out.println(fragmentSource);
     }
 
 
