@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b35e61-c26b-45a0-bb58-5d3b082ce10c" name="Changes" comment="Regexes and Shader abstraction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Images/testImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/renderer/Texture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/shaders/default.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/Shader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +37,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2MMqi7qscgdOnx9Uyu0hj1lqzuN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
