@@ -1,6 +1,8 @@
 package Unity;
 
 
+import Components.FontRenderer;
+import Components.SpriteRenderer;
 import Util.Time;
 import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
@@ -52,6 +54,9 @@ public class LevelEditorScene extends Scene {
     private  Shader defaultShader;
     private Texture testTexture;
 
+    GameObject testObj;
+    private boolean firstTime = false;
+
     public LevelEditorScene() {
 
 
@@ -59,7 +64,13 @@ public class LevelEditorScene extends Scene {
 
     @Override
     public void init(){
-        this.camera = new Camera(new Vector2f());
+        System.out.println("Creating test Object");
+        this.testObj = new GameObject("Test Object");
+        this.testObj.addComponent(new SpriteRenderer());
+        this.testObj.addComponent(new FontRenderer());
+        this.addGameObjectToScene(this.testObj);
+
+        this.camera = new Camera(new Vector2f(-200,-300));
         defaultShader = new Shader("assets/shaders/default.glsl");
         defaultShader.compile();
         this.testTexture = new Texture("assets/Images/testImage.png");
@@ -132,6 +143,19 @@ public class LevelEditorScene extends Scene {
         glBindVertexArray(0);
 
         defaultShader.detach();
+
+        if (!firstTime){
+            System.out.println("Creating gameObject");
+            GameObject go = new GameObject("Game Test 2");
+            go.addComponent(new SpriteRenderer());
+            this.addGameObjectToScene(go);
+            firstTime = true;
+        }
+
+
+        for (GameObject go: this.gameObjects){
+            go.update(dt);
+        }
     }
 
 }
