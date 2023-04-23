@@ -7,10 +7,11 @@
     <list default="true" id="90b35e61-c26b-45a0-bb58-5d3b082ce10c" name="Changes" comment="Regexes and Shader abstraction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Components/SpriteRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Components/SpriteRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Transform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/renderer/RenderBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/RenderBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
