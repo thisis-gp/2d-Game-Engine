@@ -2,6 +2,7 @@ package Components;
 
 import Unity.Component;
 import Unity.Transform;
+import imgui.ImGui;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import renderer.Texture;
@@ -39,6 +40,15 @@ public class SpriteRenderer extends Component {
         }
     }
 
+    @Override
+    public void imgui(){
+        float[] imColor = {color.x, color.y, color.z, color.w};
+        if (ImGui.colorPicker4("Color Picker", imColor)){
+            this.color.set(imColor[0], imColor[1], imColor[2], imColor[3]);
+            this.isDirty = true;
+        }
+    }
+
     public Vector4f getColor(){
         return this.color;
     }
@@ -71,4 +81,6 @@ public class SpriteRenderer extends Component {
     public void setClean(){
         this.isDirty = false;
     }
+
+
 }
