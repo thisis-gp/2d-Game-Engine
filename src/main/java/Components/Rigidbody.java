@@ -1,6 +1,5 @@
 package Components;
 
-import Unity.Component;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 

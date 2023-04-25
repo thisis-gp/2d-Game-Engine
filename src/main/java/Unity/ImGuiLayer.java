@@ -8,19 +8,24 @@ import imgui.enums.ImGuiConfigFlags;
 import imgui.enums.ImGuiKey;
 import imgui.enums.ImGuiMouseCursor;
 import imgui.gl3.ImGuiImplGl3;
+import Scenes.Scene;
 
 import static org.lwjgl.glfw.GLFW.*;
 
 public class ImGuiLayer {
+
     private long glfwWindow;
+
     // Mouse cursors provided by GLFW
     private final long[] mouseCursors = new long[ImGuiMouseCursor.COUNT];
 
     // LWJGL3 renderer (SHOULD be initialized)
     private final ImGuiImplGl3 imGuiGl3 = new ImGuiImplGl3();
-    public ImGuiLayer(long glfwWindow){
+
+    public ImGuiLayer(long glfwWindow) {
         this.glfwWindow = glfwWindow;
     }
+
     // Initialize Dear ImGui.
     public void initImGui() {
         // IMPORTANT!!
@@ -89,6 +94,10 @@ public class ImGuiLayer {
             io.setKeyShift(io.getKeysDown(GLFW_KEY_LEFT_SHIFT) || io.getKeysDown(GLFW_KEY_RIGHT_SHIFT));
             io.setKeyAlt(io.getKeysDown(GLFW_KEY_LEFT_ALT) || io.getKeysDown(GLFW_KEY_RIGHT_ALT));
             io.setKeySuper(io.getKeysDown(GLFW_KEY_LEFT_SUPER) || io.getKeysDown(GLFW_KEY_RIGHT_SUPER));
+
+            if (!io.getWantCaptureKeyboard()) {
+                KeyListener.keyCallback(w, key, scancode, action, mods);
+            }
         });
 
         glfwSetCharCallback(glfwWindow, (w, c) -> {
@@ -110,6 +119,10 @@ public class ImGuiLayer {
 
             if (!io.getWantCaptureMouse() && mouseDown[1]) {
                 ImGui.setWindowFocus(null);
+            }
+
+            if (!io.getWantCaptureMouse()) {
+                MouseListener.mouseButtonCallback(w, button, action, mods);
             }
         });
 
@@ -151,9 +164,10 @@ public class ImGuiLayer {
         fontConfig.setPixelSnapH(true);
         fontAtlas.addFontFromFileTTF("assets/fonts/segoeui.ttf", 32, fontConfig);
 
+        fontConfig.destroy(); // After all fonts were added we don't need this config more
 
         // ------------------------------------------------------------
-//        // Use freetype instead of stb_truetype to build a fonts texture
+        // Use freetype instead of stb_truetype to build a fonts texture
         ImGuiFreeType.buildFontAtlas(fontAtlas, ImGuiFreeType.RasterizerFlags.LightHinting);
 
         // Method initializes LWJGL3 renderer.
@@ -162,7 +176,7 @@ public class ImGuiLayer {
         imGuiGl3.init("#version 330 core");
     }
 
-    public void update(float dt, Scene currentScene){
+    public void update(float dt, Scene currentScene) {
         startFrame(dt);
 
         // Any Dear ImGui code SHOULD go between ImGui.newFrame()/ImGui.render() methods
@@ -175,6 +189,7 @@ public class ImGuiLayer {
     }
 
     private void startFrame(final float deltaTime) {
+        // Get window properties and mouse position
         float[] winWidth = {Window.getWidth()};
         float[] winHeight = {Window.getHeight()};
         double[] mousePosX = {0};
@@ -184,7 +199,7 @@ public class ImGuiLayer {
         // We SHOULD call those methods to update Dear ImGui state for the current frame
         final ImGuiIO io = ImGui.getIO();
         io.setDisplaySize(winWidth[0], winHeight[0]);
-        io.setDisplayFramebufferScale(1f,1f);
+        io.setDisplayFramebufferScale(1f, 1f);
         io.setMousePos((float) mousePosX[0], (float) mousePosY[0]);
         io.setDeltaTime(deltaTime);
 
@@ -198,7 +213,6 @@ public class ImGuiLayer {
         // After Dear ImGui prepared a draw data, we use it in the LWJGL3 renderer.
         // At that moment ImGui will be rendered to the current OpenGL context.
         imGuiGl3.render(ImGui.getDrawData());
-
     }
 
     // If you want to clean a room after yourself - do it by yourself

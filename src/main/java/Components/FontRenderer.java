@@ -1,17 +1,15 @@
 package Components;
-
-import Unity.Component;
-
 public class FontRenderer extends Component {
+
     @Override
-    public void start(){
-        if (gameObject.getComponent(SpriteRenderer.class) != null){
-            System.out.println("Found font renderer");
+    public void start() {
+        if (gameObject.getComponent(SpriteRenderer.class) != null) {
+            System.out.println("Found Font Renderer!");
         }
     }
 
     @Override
-    public void update(float dt){
+    public void update(float dt) {
 
     }
 }

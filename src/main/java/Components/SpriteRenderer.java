@@ -1,8 +1,7 @@
 package Components;
 
-import Unity.Component;
-import Unity.Transform;
 import imgui.ImGui;
+import Unity.Transform;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 import renderer.Texture;
