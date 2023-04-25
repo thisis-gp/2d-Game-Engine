@@ -36,18 +36,18 @@ public class Window {
         switch (newScene) {
             case 0:
                 currentScene = new LevelEditorScene();
-                currentScene.init();
-                currentScene.start();
                 break;
             case 1:
                 currentScene = new LevelScene();
-                currentScene.init();
-                currentScene.start();
                 break;
             default:
                 assert false : "Unknown scene '" + newScene + "'";
                 break;
         }
+
+        currentScene.load();
+        currentScene.init();
+        currentScene.start();
     }
 
     public static Window get() {
@@ -135,8 +135,6 @@ public class Window {
         float endTime;
         float dt = -1.0f;
 
-        currentScene.load();
-
         while (!glfwWindowShouldClose(glfwWindow)) {
             // Poll events
             glfwPollEvents();
@@ -145,7 +143,6 @@ public class Window {
             glClear(GL_COLOR_BUFFER_BIT);
 
             if (dt >= 0) {
-                System.out.println(dt);
                 currentScene.update(dt);
             }
 
@@ -160,20 +157,19 @@ public class Window {
         currentScene.saveExit();
     }
 
-    public static float getWidth(){
+    public static int getWidth() {
         return get().width;
     }
 
-    public static float getHeight(){
+    public static int getHeight() {
         return get().height;
     }
 
-    public static void setWidth(int newWidth){
+    public static void setWidth(int newWidth) {
         get().width = newWidth;
     }
 
-    public static void setHeight(int newHeight){
+    public static void setHeight(int newHeight) {
         get().height = newHeight;
     }
 }
-

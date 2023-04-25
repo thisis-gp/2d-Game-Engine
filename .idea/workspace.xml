@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b35e61-c26b-45a0-bb58-5d3b082ce10c" name="Changes" comment="Regexes and Shader abstraction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unity/ComponentDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unity/GameObjectDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/Rigidbody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Components/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Components/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Components/SpriteRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Components/SpriteRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Components/Spritesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Components/Spritesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/MouseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/Texture.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +39,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +95,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
