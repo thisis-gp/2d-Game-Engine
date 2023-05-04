@@ -2,21 +2,21 @@ package renderer;
 
 import Components.SpriteRenderer;
 import Unity.Window;
-import Util.AssetPool;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
+import Util.AssetPool;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL30.glBindVertexArray;
-import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 import static org.lwjgl.opengl.GL20.glDisableVertexAttribArray;
 import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
 import static org.lwjgl.opengl.GL20C.glVertexAttribPointer;
+import static org.lwjgl.opengl.GL30.glBindVertexArray;
+import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 
-public class RenderBatch implements Comparable<RenderBatch>{
+public class RenderBatch implements Comparable<RenderBatch> {
     // Vertex
     // ======
     // Pos               Color                         tex coords     tex id
@@ -45,7 +45,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
     private Shader shader;
     private int zIndex;
 
-    public RenderBatch(int maxBatchSize, int zIndex){
+    public RenderBatch(int maxBatchSize, int zIndex) {
         this.zIndex = zIndex;
         shader = AssetPool.getShader("assets/shaders/default.glsl");
         this.sprites = new SpriteRenderer[maxBatchSize];
@@ -111,9 +111,9 @@ public class RenderBatch implements Comparable<RenderBatch>{
 
     public void render() {
         boolean rebufferData = false;
-        for (int i = 0; i < numSprites; i++){
+        for (int i=0; i < numSprites; i++) {
             SpriteRenderer spr = sprites[i];
-            if (spr.isDirty()){
+            if (spr.isDirty()) {
                 loadVertexProperties(i);
                 spr.setClean();
                 rebufferData = true;
@@ -123,6 +123,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
             glBindBuffer(GL_ARRAY_BUFFER, vboID);
             glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
         }
+
         // Use shader
         shader.use();
         shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
@@ -161,7 +162,7 @@ public class RenderBatch implements Comparable<RenderBatch>{
         int texId = 0;
         if (sprite.getTexture() != null) {
             for (int i = 0; i < textures.size(); i++) {
-                if (textures.get(i) == sprite.getTexture()) {
+                if (textures.get(i).equals(sprite.getTexture())) {
                     texId = i + 1;
                     break;
                 }
@@ -231,15 +232,15 @@ public class RenderBatch implements Comparable<RenderBatch>{
         return this.hasRoom;
     }
 
-    public boolean hasTextureRoom(){
+    public boolean hasTextureRoom() {
         return this.textures.size() < 8;
     }
 
-    public boolean hasTexture(Texture tex){
+    public boolean hasTexture(Texture tex) {
         return this.textures.contains(tex);
     }
 
-    public int zIndex(){
+    public int zIndex() {
         return this.zIndex;
     }
 
