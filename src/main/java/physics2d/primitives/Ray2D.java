@@ -2,6 +2,8 @@ package physics2d.primitives;
 
 import org.joml.Vector2f;
 
+import org.joml.Vector2f;
+
 public class Ray2D {
     private Vector2f origin;
     private Vector2f direction;
