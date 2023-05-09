@@ -51,9 +51,11 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   },
   {
     "uid": 2,
@@ -107,9 +109,11 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   },
   {
     "uid": 3,
@@ -163,9 +167,11 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   },
   {
     "uid": 4,
@@ -175,9 +181,9 @@
         "type": "Components.SpriteRenderer",
         "properties": {
           "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
+            "x": 0.39682537,
+            "y": 0.10393046,
+            "z": 0.10393046,
             "w": 1.0
           },
           "sprite": {
@@ -219,9 +225,11 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   },
   {
     "uid": 5,
@@ -275,9 +283,11 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   },
   {
     "uid": 6,
@@ -287,9 +297,9 @@
         "type": "Components.SpriteRenderer",
         "properties": {
           "color": {
-            "x": 0.82142854,
-            "y": 0.16868621,
-            "z": 0.16868621,
+            "x": 0.60317457,
+            "y": 0.100529104,
+            "z": 0.100529104,
             "w": 1.0
           },
           "sprite": {
@@ -331,8 +341,10 @@
       "scale": {
         "x": 32.0,
         "y": 32.0
-      }
+      },
+      "rotation": 0.0
     },
-    "zIndex": 0
+    "zIndex": 0,
+    "doSerialization": true
   }
 ]
