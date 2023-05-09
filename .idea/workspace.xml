@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b35e61-c26b-45a0-bb58-5d3b082ce10c" name="Changes" comment="Regexes and Shader abstraction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/editor/PropertiesWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Components/EditorCamera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Components/GridLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Components/GridLines.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Scenes/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scenes/LevelEditorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Scenes/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scenes/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/ImGuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/ImGuiLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/editor/GameViewWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/editor/GameViewWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
