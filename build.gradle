@@ -2,45 +2,41 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
 version '1.0-SNAPSHOT'
 
-
+sourceCompatibility = 1.8
 
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     jcenter()
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-test {
-    useJUnitPlatform()
-}
-
-project.ext.lwjglVersion = "3.3.1"
-project.ext.jomlVersion = "1.10.5"
+project.ext.lwjglVersion = "3.2.3"
+project.ext.jomlVersion = "1.9.23"
 project.ext.lwjglNatives = "natives-windows"
-project.ext.imguiVersion = '1.77-0.17.1'
-
+project.ext.imguiVersion = '1.81.0'
 
 dependencies {
+    // Box2D
+    implementation name: 'jbox2d-library'
+
     // JUnit
     testImplementation('junit:junit:4.13')
-    //GSON
-    implementation 'com.google.code.gson:gson:2.10.1'
 
-    // ImGUI
-    implementation "io.imgui.java:binding:$imguiVersion"
-    implementation "io.imgui.java:lwjgl3:$imguiVersion"
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
 
-    // Include all available natives, but it's likely that you want something specific
-    runtimeOnly "io.imgui.java:natives-windows:$imguiVersion"
+    // ImGUI stuff
+    implementation "io.github.spair:imgui-java-app:$imguiVersion"
 
-    // LWJGL
+    // LWJGL stuff
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
 
     implementation "org.lwjgl:lwjgl"

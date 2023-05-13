@@ -1,7 +1,7 @@
 package Unity;
 
-import Components.Sprite;
-import Components.SpriteRenderer;
+import components.Sprite;
+import components.SpriteRenderer;
 import org.joml.Vector2f;
 
 public class Prefabs {

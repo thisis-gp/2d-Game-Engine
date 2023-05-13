@@ -1,6 +1,6 @@
 package renderer;
 
-import Components.SpriteRenderer;
+import components.SpriteRenderer;
 import Unity.GameObject;
 
 import java.util.ArrayList;
@@ -38,11 +38,21 @@ public class Renderer {
         }
 
         if (!added) {
-            RenderBatch newBatch = new RenderBatch(MAX_BATCH_SIZE, sprite.gameObject.transform.zIndex);
+            RenderBatch newBatch = new RenderBatch(MAX_BATCH_SIZE,
+                    sprite.gameObject.transform.zIndex, this);
             newBatch.start();
             batches.add(newBatch);
             newBatch.addSprite(sprite);
             Collections.sort(batches);
+        }
+    }
+
+    public void destroyGameObject(GameObject go) {
+        if (go.getComponent(SpriteRenderer.class) == null) return;
+        for (RenderBatch batch : batches) {
+            if (batch.destroyIfExists(go)) {
+                return;
+            }
         }
     }
 
@@ -56,7 +66,8 @@ public class Renderer {
 
     public void render() {
         currentShader.use();
-        for (RenderBatch batch : batches) {
+        for (int i = 0; i < batches.size(); i++) {
+            RenderBatch batch = batches.get(i);
             batch.render();
         }
     }

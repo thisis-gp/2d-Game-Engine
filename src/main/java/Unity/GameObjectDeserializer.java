@@ -1,7 +1,7 @@
 package Unity;
 
 import com.google.gson.*;
-import Components.Component;
+import components.Component;
 
 import java.lang.reflect.Type;
 
