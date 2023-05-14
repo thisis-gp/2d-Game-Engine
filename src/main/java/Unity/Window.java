@@ -1,9 +1,11 @@
 package Unity;
 
+import editor.GameViewWindow;
 import observers.EventSystem;
 import observers.Observer;
 import observers.events.Event;
 import observers.events.EventType;
+import org.joml.Vector4f;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.openal.AL;
@@ -11,8 +13,10 @@ import org.lwjgl.openal.ALC;
 import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.openal.ALCapabilities;
 import org.lwjgl.opengl.GL;
+import physics2d.Physics2D;
 import renderer.*;
 import Scenes.LevelEditorSceneInitializer;
+import Scenes.LevelSceneInitializer;
 import Scenes.Scene;
 import Scenes.SceneInitializer;
 import Util.AssetPool;
@@ -42,7 +46,7 @@ public class Window implements Observer {
     private Window() {
         this.width = 1920;
         this.height = 1080;
-        this.title = "Jade";
+        this.title = "Unity";
         EventSystem.addObserver(this);
     }
 
@@ -66,8 +70,10 @@ public class Window implements Observer {
         return Window.window;
     }
 
+    public static Physics2D getPhysics() { return currentScene.getPhysics(); }
+
     public static Scene getScene() {
-        return get().currentScene;
+        return currentScene;
     }
 
     public void run() {
@@ -179,7 +185,7 @@ public class Window implements Observer {
             pickingTexture.enableWriting();
 
             glViewport(0, 0, 3840, 2160);
-            glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+            glClearColor(0, 0, 0, 0);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             Renderer.bindShader(pickingShader);
@@ -192,11 +198,11 @@ public class Window implements Observer {
             DebugDraw.beginFrame();
 
             this.framebuffer.bind();
-            glClearColor(1, 1, 1, 1);
+            Vector4f clearColor = currentScene.camera().clearColor;
+            glClearColor(clearColor.x, clearColor.y, clearColor.z, clearColor.w);
             glClear(GL_COLOR_BUFFER_BIT);
 
             if (dt >= 0) {
-                DebugDraw.draw();
                 Renderer.bindShader(defaultShader);
                 if (runtimePlaying) {
                     currentScene.update(dt);
@@ -204,10 +210,14 @@ public class Window implements Observer {
                     currentScene.editorUpdate(dt);
                 }
                 currentScene.render();
+                DebugDraw.draw();
             }
             this.framebuffer.unbind();
 
             this.imguiLayer.update(dt, currentScene);
+
+            KeyListener.endFrame();
+            MouseListener.endFrame();
             glfwSwapBuffers(glfwWindow);
 
             endTime = (float)glfwGetTime();
@@ -217,11 +227,11 @@ public class Window implements Observer {
     }
 
     public static int getWidth() {
-        return get().width;
+        return 3840;//get().width;
     }
 
     public static int getHeight() {
-        return get().height;
+        return 2160;//get().height;
     }
 
     public static void setWidth(int newWidth) {
@@ -250,7 +260,7 @@ public class Window implements Observer {
             case GameEngineStartPlay:
                 this.runtimePlaying = true;
                 currentScene.save();
-                Window.changeScene(new LevelEditorSceneInitializer());
+                Window.changeScene(new LevelSceneInitializer());
                 break;
             case GameEngineStopPlay:
                 this.runtimePlaying = false;

@@ -4,6 +4,7 @@ import editor.JImGui;
 import imgui.ImGui;
 import imgui.type.ImInt;
 import Unity.GameObject;
+import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
@@ -26,6 +27,22 @@ public abstract class Component {
     }
 
     public void editorUpdate(float dt) {
+
+    }
+
+    public void beginCollision(GameObject collidingObject, Contact contact, Vector2f hitNormal) {
+
+    }
+
+    public void endCollision(GameObject collidingObject, Contact contact, Vector2f hitNormal) {
+
+    }
+
+    public void preSolve(GameObject collidingObject, Contact contact, Vector2f hitNormal) {
+
+    }
+
+    public void postSolve(GameObject collidingObject, Contact contact, Vector2f hitNormal) {
 
     }
 
@@ -77,6 +94,10 @@ public abstract class Component {
                     if (ImGui.combo(field.getName(), index, enumValues, enumValues.length)) {
                         field.set(this, type.getEnumConstants()[index.get()]);
                     }
+                } else if (type == String.class) {
+                    field.set(this,
+                            JImGui.inputText(field.getName() + ": ",
+                                    (String)value));
                 }
 
 
