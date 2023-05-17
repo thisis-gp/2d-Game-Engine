@@ -3,6 +3,7 @@ package components;
 import Unity.GameObject;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+import Util.AssetPool;
 
 public class Flagpole extends Component {
     private boolean isTop = false;

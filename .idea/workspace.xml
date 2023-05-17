@@ -5,55 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b35e61-c26b-45a0-bb58-5d3b082ce10c" name="Changes" comment="Regexes and Shader abstraction">
-      <change afterPath="$PROJECT_DIR$/assets/images/bigSpritesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pipes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/turtle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Scenes/LevelSceneInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unity/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/BlockCoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/BreakableBrick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Fireball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Flagpole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Flower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/GameCamera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/GoombaAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Ground.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/KeyControls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/MushroomAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/Pipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/PlayerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/QuestionBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/components/TurtleAI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/physics2d/RaycastInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/physics2d/UnityContactListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/physics2d/components/PillboxCollider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/components/Coin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/shaders/default.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/shaders/default.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Scenes/LevelEditorSceneInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scenes/LevelEditorSceneInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Scenes/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scenes/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Scenes/LevelSceneInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scenes/LevelSceneInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/ImGuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/ImGuiLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/KeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/MouseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Prefabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Prefabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unity/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unity/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/Gizmo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Gizmo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/GridLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/GridLines.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/MouseControls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/MouseControls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/components/StateMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/StateMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/editor/PropertiesWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/editor/PropertiesWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/DebugDrawJ2D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/Flagpole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/Flagpole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/GoombaAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/GoombaAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/KeyControls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/KeyControls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/MushroomAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/MushroomAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/components/TurtleAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/TurtleAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/editor/GameViewWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/editor/GameViewWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/Physics2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/physics2d/Physics2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/components/Box2DCollider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/physics2d/components/Box2DCollider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/components/CircleCollider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/physics2d/components/CircleCollider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/components/Collider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/components/Rigidbody2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/physics2d/components/Rigidbody2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/DebugDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/DebugDraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/PickingTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/PickingTexture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/physics2d/components/PillboxCollider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/physics2d/components/PillboxCollider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/renderer/RenderBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/RenderBatch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,10 +76,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/D A GURUPRIYAN/IdeaProjects/untitled/libs/jbox2d-library.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.main">
