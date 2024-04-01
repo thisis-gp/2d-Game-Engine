@@ -6,6 +6,10 @@ Welcome to the Mario 2D Game Engine, a custom game engine built using Java with 
 ![Mario-Game](https://github.com/thisis-gp/2d-Game-Engine/blob/master/assets/game%20engine%201.png?raw=true)
 ![Mario-Game](https://github.com/thisis-gp/2d-Game-Engine/blob/master/assets/game%20engine.png?raw=true)
 
+## Project Report
+
+You can download the project report PDF [here](./assets/mario.pdf).
+
 ## Features
 
 - **Player Controls**: Customizable controls for the Mario character.
