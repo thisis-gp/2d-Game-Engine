@@ -2,6 +2,10 @@
 
 Welcome to the Mario 2D Game Engine, a custom game engine built using Java with LWJGL, Box2D, JUnit, ImGui, and GSON. This engine allows you to create and play custom Mario levels with ease.
 
+![Mario-Game](https://github.com/thisis-gp/2d-Game-Engine/blob/master/assets/game.png?raw=true)
+![Mario-Game](https://github.com/thisis-gp/2d-Game-Engine/blob/master/assets/game%20engine%201.png?raw=true)
+![Mario-Game](https://github.com/thisis-gp/2d-Game-Engine/blob/master/assets/game%20engine.png?raw=true)
+
 ## Features
 
 - **Player Controls**: Customizable controls for the Mario character.
@@ -46,13 +50,13 @@ Welcome to the Mario 2D Game Engine, a custom game engine built using Java with 
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/yourusername/mario-2d-game-engine.git](https://github.com/thisis-gp/2d-Game-Engine.git)
+git clone https://github.com/thisis-gp/2d-Game-Engine.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd mario-2d-game-engine/src/main
+cd 2d-Game-Engine/src/main/java
 ```
 
 3. Compile and run the `Main.java` file:
