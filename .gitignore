@@ -40,3 +40,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+browser/dl/
+browser/out/
+dist/
